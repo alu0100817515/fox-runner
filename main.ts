@@ -4,14 +4,7 @@ enum ActionKind {
     Jumping
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    mySprite,
-    assets.animation`Jumping`,
-    500,
-    false
-    )
-    custom.mover(0, 10)
-    custom.mover(10, 0)
+    startRunning()
 })
 controller.A.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
@@ -21,6 +14,25 @@ controller.A.onEvent(ControllerButtonEvent.Released, function () {
     true
     )
 })
+function startRunning () {
+    for (let index = 0; index < 5; index++) {
+        animation.runImageAnimation(
+        mySprite,
+        assets.animation`Walking`,
+        100,
+        false
+        )
+        custom.mover(10, 0)
+    }
+    animation.runImageAnimation(
+    mySprite,
+    assets.animation`Jumping`,
+    100,
+    false
+    )
+    custom.mover(0, 10)
+    custom.mover(10, 0)
+}
 let mySprite: Sprite = null
 mySprite = sprites.create(assets.image`snow_fox`, SpriteKind.Player)
 scene.setBackgroundImage(assets.image`background`)
