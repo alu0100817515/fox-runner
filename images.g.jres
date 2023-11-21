@@ -14,6 +14,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "background"
     },
+    "image4": {
+        "data": "hwQQABAAAAAAAAAAAAAAsFUFAAAAAAC7VfX//////7tV9f//////u1UFIiIiAgC7AAAiIiICALAAACIiIiIAAAAAICIiIgIAAAAAIiIiAgAAAAAiIiICAAAAICIiIgAAAAAiIiICAAAAICIiIgAAAAAgIiIiAAAAAAAiIiICAAAAACAiIgAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "GoalFlag"
+    },
     "anim4": {
         "namespace": "myAnimations",
         "id": "anim4",

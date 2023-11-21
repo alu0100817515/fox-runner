@@ -3,6 +3,9 @@ enum ActionKind {
     Idle,
     Jumping
 }
+namespace SpriteKind {
+    export const Goal = SpriteKind.create()
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     startRunning()
 })
@@ -35,12 +38,14 @@ function startRunning () {
 }
 let mySprite: Sprite = null
 mySprite = sprites.create(assets.image`snow_fox`, SpriteKind.Player)
+let spriteGoal = sprites.create(assets.image`GoalFlag`, SpriteKind.Goal)
 scene.setBackgroundImage(assets.image`background`)
 mySprite.setStayInScreen(true)
 mySprite.ay = 50
 tiles.setCurrentTilemap(tilemap`nivel1`)
 scene.cameraFollowSprite(mySprite)
-tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
+tiles.placeOnTile(mySprite, tiles.getTileLocation(10, 10))
+tiles.placeOnTile(spriteGoal, tiles.getTileLocation(14, 10))
 animation.runImageAnimation(
 mySprite,
 assets.animation`Idle`,

@@ -46,8 +46,30 @@ namespace custom {
     //% block
     export function mover(x: number, y: number): void {
         // Add code here
-        mySprite.setPosition(mySprite.x + x, mySprite.y - y)
-        pause(100)
+        //mySprite.setPosition(mySprite.x + x, mySprite.y - y)
+        //pause(100)
+        controller.moveSprite(mySprite,x,y);  
     }
+    /**
+         * Control a sprite using the direction buttons from the controller. Note that this will overwrite
+         * the current velocity of the sprite whenever a directional button is pressed. To stop controlling
+         * a sprite, pass 0 for vx and vy.
+         *
+         * @param sprite The Sprite to control
+         * @param vx The velocity used for horizontal movement when left/right is pressed
+         * @param vy The velocity used for vertical movement when up/down is pressed
+         */
+    //% blockId="ctrlgame_control_sprite" block="%controller move $sprite=variables_get(mySprite) with buttons||vx $vx vy $vy"
+    //% weight=100
+    //% expandableArgumentMode="toggle"
+    //% vx.defl=100 vy.defl=100
+    //% help=controller/move-sprite
+    //% group="Multiplayer"
+    //% vx.shadow="spriteSpeedPicker"
+    //% vy.shadow="spriteSpeedPicker"
+    //% parts="multiplayer"
+    //moveSprite(sprite: Sprite, vx: number = 100, vy: number = 100) {
+    //    this._moveSpriteInternal(sprite, vx, vy);
+    //}
     
 }
