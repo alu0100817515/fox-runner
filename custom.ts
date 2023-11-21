@@ -44,10 +44,66 @@ namespace custom {
      * @param e describe parameter here
      */
     //% block
-    export function mover(x: number, y: number): void {
-        // Add code here
-        mySprite.setPosition(mySprite.x + x, mySprite.y - y)
-        pause(100)
+    export function mover(): void {
+        // Add code her
+        //if(y > 0)
+         //mySprite.x+=1
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Walking`,
+            100,
+            true
+        )
+        mySprite.vx=50
+        mySprite.vy=0
+        
+        pause(300)
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Idle`,
+            100,
+            true
+        )
+        mySprite.vx = 0
+        mySprite.vy = 0
+        //mySprite.setPosition(mySprite.x + x, mySprite.y - y)
+        pause(300)
     }
-    
+
+    /**
+     * TODO: describe your function here
+     * @param n describe parameter here, eg: 5
+     * @param s describe parameter here, eg: "Hello"
+     * @param e describe parameter here
+     */
+    //% block
+    export function saltar(): void {
+        // Add code her
+        //if(y > 0)
+        //mySprite.x+=1
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Jumping`,
+            100,
+            true
+        )
+        mySprite.vx = 0
+        mySprite.vy = 50
+        mySprite.ay = -100
+        pause(700)
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Idle`,
+            100,
+            true
+        )
+        mySprite.vx = 50
+        mySprite.vy = 0
+        mySprite.ay = 100
+        pause(300)
+        mySprite.vx = 0
+        //mySprite.setPosition(mySprite.x + x, mySprite.y - y)
+        pause(300)
+    }
+
 }

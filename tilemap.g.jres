@@ -4,12 +4,6 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile4": {
-        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "myTile2"
-    },
     "tile1": {
         "data": "hwQQABAAAAD/H+Hu7u7e7h8R4e7u7u3uHxER7u7u7u4fERHh7u7u7h8REeHu7u7uHxER4e7u7u0fERHh7u7u7h8REe7u7u7uHxER7u7u3u4fERHu7u7u7h8REe7u7u7tHxER4e7u7u0fEeHh7u7u7R8R4RHu7u3tHxHhEe7u3u7/HxER7u7u7g==",
         "mimeType": "image/x-mkcd-f4",
