@@ -286,7 +286,7 @@ let SpriteGoal: Sprite = null
 let mySprite: Sprite = null
 mySprite = sprites.create(assets.image`snow_fox`, SpriteKind.Player)
 SpriteGoal = sprites.create(assets.image`myImage1`, SpriteKind.Goal)
-nivel = 1
+nivel = 0
 mySprite.setStayInScreen(true)
 mySprite.ay = 50
 scene.cameraFollowSprite(mySprite)
