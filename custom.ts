@@ -127,6 +127,7 @@ namespace custom {
         mySprite.ay = 100
         pause(300)
         mySprite.vx = 0
+        mySprite.ay = 0
         pause(300)
     }
 
@@ -159,6 +160,7 @@ namespace custom {
         mySprite.vy = 0
         mySprite.ay = 100
         pause(300)
+        mySprite.vx = 0
         mySprite.vx = 0
         pause(300)
     }
