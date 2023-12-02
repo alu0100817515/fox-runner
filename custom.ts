@@ -52,7 +52,7 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx=50
+        mySprite.vx=49
         mySprite.vy=0
         
         pause(300)
@@ -82,10 +82,10 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx = -50
+        mySprite.vx = -45
         mySprite.vy = 0
-
         pause(300)
+        mySprite.ay = 2000
         animation.runImageAnimation(
             mySprite,
             assets.animation`Idle_Left`,
@@ -95,6 +95,7 @@ namespace custom {
         mySprite.vx = 0
         mySprite.vy = 0
         pause(300)
+        mySprite.ay = 50
     }
 
     /**
@@ -116,12 +117,12 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
-        mySprite.vx = 60
+        mySprite.vx = 65
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
         mySprite.vx = 0
-        mySprite.ay = 0
+        mySprite.ay = 50
         pause(300)
         animation.runImageAnimation(
             mySprite,
@@ -150,12 +151,12 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
-        mySprite.vx = -60
+        mySprite.vx = -65
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
         mySprite.vx = 0
-        mySprite.vx = 0
+        mySprite.ay = 50
         pause(300)
         animation.runImageAnimation(
             mySprite,

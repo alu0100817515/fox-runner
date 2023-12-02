@@ -8,17 +8,21 @@ namespace SpriteKind {
     export const Puntero_Camara = SpriteKind.create()
 }
 function Nivel_3 () {
-	
+    for (let index = 0; index < 11; index++) {
+        custom.moverseIzquierda()
+    }
+    for (let index = 0; index < 3; index++) {
+        custom.saltarIzquierda()
+    }
+    custom.moverseIzquierda()
 }
 function Nivel_7 () {
 	
 }
 function Nivel_1 () {
-    for (let index = 0; index < 5; index++) {
+    for (let index = 0; index < 9; index++) {
         custom.moverseDerecha()
     }
-    custom.saltarDerecha()
-    custom.saltarIzquierda()
 }
 function Nivel_9 () {
 	
@@ -29,8 +33,15 @@ function Nivel_4 () {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     startRunning()
 })
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    Fijar_Nivel(3)
+})
 function Nivel_10 () {
 	
+}
+function Fijar_Nivel (Nivel_actual: number) {
+    nivel = Nivel_actual
+    controlNiveles(Nivel_actual)
 }
 function Nivel_8 () {
 	
@@ -38,24 +49,24 @@ function Nivel_8 () {
 function controlNiveles (nivel: number) {
     if (nivel == 1) {
         scene.setBackgroundImage(assets.image`background`)
-        tiles.setCurrentTilemap(tilemap`nivel1`)
+        tiles.setCurrentTilemap(tilemap`nivel_1`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
-        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(10, 12))
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
+        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(9, 14))
     }
     if (nivel == 2) {
         scene.setBackgroundImage(assets.image`a`)
-        tiles.setCurrentTilemap(tilemap`nivel2`)
+        tiles.setCurrentTilemap(tilemap`nivel_2`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
-        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(5, 14))
+        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(14, 12))
     }
     if (nivel == 3) {
         scene.setBackgroundImage(assets.image`b`)
         tiles.setCurrentTilemap(tilemap`nivel3`)
-        tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
-        tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
-        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(5, 13))
+        tiles.placeOnTile(Camara, tiles.getTileLocation(14, 10))
+        tiles.placeOnTile(mySprite, tiles.getTileLocation(14, 10))
+        tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(0, 10))
     }
     if (nivel == 4) {
         scene.setBackgroundImage(img`
@@ -958,7 +969,13 @@ function Nivel_5 () {
 	
 }
 function Nivel_2 () {
-	
+    for (let index = 0; index < 5; index++) {
+        custom.moverseDerecha()
+    }
+    custom.saltarDerecha()
+    for (let index = 0; index < 9; index++) {
+        custom.moverseDerecha()
+    }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSprite) {
     nivel = nivel + 1
