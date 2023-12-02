@@ -52,7 +52,7 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx=49
+        mySprite.vx=49.3
         mySprite.vy=0
         
         pause(300)
@@ -84,7 +84,7 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx = -49
+        mySprite.vx = -49.3
         mySprite.vy = 0
         pause(300)
         mySprite.ay = 2000
@@ -118,8 +118,11 @@ namespace custom {
         mySprite.vx = 0
         mySprite.vy = 40
         mySprite.ay = -100
+        //mySprite.vy = 40
+        //mySprite.ay = -90
         pause(700)
-        mySprite.vx = 55
+        mySprite.vx = 55.5
+        //mySprite.vx = 75.5
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -154,7 +157,7 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
-        mySprite.vx = -55
+        mySprite.vx = -55.5
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -189,7 +192,7 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -200
         pause(700)
-        mySprite.vx = -100
+        mySprite.vx = -60.5
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -223,7 +226,7 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -200
         pause(700)
-        mySprite.vx = 100
+        mySprite.vx = 80
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
