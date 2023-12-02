@@ -7,9 +7,32 @@ namespace SpriteKind {
     export const Goal = SpriteKind.create()
     export const Puntero_Camara = SpriteKind.create()
 }
+function Nivel_3 () {
+	
+}
+function Nivel_7 () {
+	
+}
+function Nivel_1 () {
+    for (let index = 0; index < 5; index++) {
+        custom.moverseDerecha()
+    }
+}
+function Nivel_9 () {
+	
+}
+function Nivel_4 () {
+	
+}
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     startRunning()
 })
+function Nivel_10 () {
+	
+}
+function Nivel_8 () {
+	
+}
 function controlNiveles (nivel: number) {
     if (nivel == 0) {
         scene.setBackgroundImage(assets.image`background`)
@@ -33,18 +56,32 @@ function controlNiveles (nivel: number) {
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(5, 13))
     }
 }
+function Nivel_5 () {
+	
+}
+function Nivel_2 () {
+    for (let index = 0; index < 5; index++) {
+        custom.moverseIzquierda()
+    }
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSprite) {
     nivel = nivel + 1
     controlNiveles(nivel)
 })
+function Nivel_6 () {
+	
+}
 function startRunning () {
-    for (let index = 0; index < 5; index++) {
-        custom.moverseDerecha()
-    }
-    custom.saltarDerecha()
-    for (let index = 0; index < 5; index++) {
-        custom.moverseDerecha()
-    }
+    Nivel_1()
+    Nivel_2()
+    Nivel_3()
+    Nivel_4()
+    Nivel_5()
+    Nivel_6()
+    Nivel_7()
+    Nivel_8()
+    Nivel_9()
+    Nivel_10()
 }
 let nivel = 0
 let Camara: Sprite = null
