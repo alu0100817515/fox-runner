@@ -17,6 +17,8 @@ function Nivel_1 () {
     for (let index = 0; index < 5; index++) {
         custom.moverseDerecha()
     }
+    custom.saltarDerecha()
+    custom.saltarIzquierda()
 }
 function Nivel_9 () {
 	
@@ -956,9 +958,7 @@ function Nivel_5 () {
 	
 }
 function Nivel_2 () {
-    for (let index = 0; index < 5; index++) {
-        custom.moverseIzquierda()
-    }
+	
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSprite) {
     nivel = nivel + 1

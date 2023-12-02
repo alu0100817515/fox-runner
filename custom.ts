@@ -109,26 +109,26 @@ namespace custom {
         animation.runImageAnimation(
             mySprite,
             assets.animation`Jumping_Right`,
-            100,
+            250,
             true
         )
         mySprite.vx = 0
-        mySprite.vy = 50
+        mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
+        mySprite.vx = 60
+        mySprite.vy = 0
+        mySprite.ay = 150
+        pause(300)
+        mySprite.vx = 0
+        mySprite.ay = 0
+        pause(300)
         animation.runImageAnimation(
             mySprite,
             assets.animation`Idle_Right`,
             100,
             true
         )
-        mySprite.vx = 50
-        mySprite.vy = 0
-        mySprite.ay = 100
-        pause(300)
-        mySprite.vx = 0
-        mySprite.ay = 0
-        pause(300)
     }
 
     /**
@@ -143,26 +143,26 @@ namespace custom {
         animation.runImageAnimation(
             mySprite,
             assets.animation`Jumping_Left`,
-            100,
+            250,
             true
         )
         mySprite.vx = 0
-        mySprite.vy = 50
+        mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
+        mySprite.vx = -60
+        mySprite.vy = 0
+        mySprite.ay = 150
+        pause(300)
+        mySprite.vx = 0
+        mySprite.vx = 0
+        pause(300)
         animation.runImageAnimation(
             mySprite,
             assets.animation`Idle_Left`,
             100,
             true
         )
-        mySprite.vx = -50
-        mySprite.vy = 0
-        mySprite.ay = 100
-        pause(300)
-        mySprite.vx = 0
-        mySprite.vx = 0
-        pause(300)
     }
 
 }
