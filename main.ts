@@ -24,7 +24,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     startRunning()
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    Fijar_Nivel(8)
+    Fijar_Nivel(1)
 })
 function Fijar_Nivel (Nivel_actual: number) {
     nivel = Nivel_actual
