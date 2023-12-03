@@ -52,7 +52,8 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx=49.3
+        // mySprite.vx=49.3
+        mySprite.vx = 52.3
         mySprite.vy=0
         
         pause(300)
@@ -84,7 +85,8 @@ namespace custom {
             100,
             true
         )
-        mySprite.vx = -49.3
+        // mySprite.vx = -49.3
+        mySprite.vx = -52.3
         mySprite.vy = 0
         pause(300)
         mySprite.ay = 2000
@@ -118,11 +120,9 @@ namespace custom {
         mySprite.vx = 0
         mySprite.vy = 40
         mySprite.ay = -100
-        //mySprite.vy = 40
-        //mySprite.ay = -90
         pause(700)
-        mySprite.vx = 55.5
-        //mySprite.vx = 75.5
+        // mySprite.vx = 55.5
+        mySprite.vx = 52.3
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -157,7 +157,8 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -100
         pause(700)
-        mySprite.vx = -55.5
+        // mySprite.vx = -55.5
+        mySprite.vx = -52.3
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -171,6 +172,41 @@ namespace custom {
             true
         )
         pause(300)
+    }
+
+    /**
+         * TODO: describe your function here
+         * @param n describe parameter here, eg: 5
+         * @param s describe parameter here, eg: "Hello"
+         * @param e describe parameter here
+         */
+    //% block
+    export function saltoDobleDerecha(): void {
+        // Add code her
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Doueble_Jumping_Right`,
+            250,
+            true
+        )
+        mySprite.vx = 0
+        mySprite.vy = 40
+        mySprite.ay = -200
+        pause(700)
+        // mySprite.vx = 80
+        mySprite.vx = 78
+        mySprite.vy = 0
+        mySprite.ay = 150
+        pause(300)
+        mySprite.vx = 0
+        mySprite.ay = 50
+        pause(300)
+        animation.runImageAnimation(
+            mySprite,
+            assets.animation`Idle_Right`,
+            100,
+            true
+        )
     }
 
     /**
@@ -192,7 +228,8 @@ namespace custom {
         mySprite.vy = 40
         mySprite.ay = -200
         pause(700)
-        mySprite.vx = -60.5
+        // mySprite.vx = -60.5
+        mySprite.vx = -78
         mySprite.vy = 0
         mySprite.ay = 150
         pause(300)
@@ -206,40 +243,4 @@ namespace custom {
             true
         )
     }
-
-    /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 5
-     * @param s describe parameter here, eg: "Hello"
-     * @param e describe parameter here
-     */
-    //% block
-    export function saltoDobleDerecha(): void {
-        // Add code her
-        animation.runImageAnimation(
-            mySprite,
-            assets.animation`Doueble_Jumping_Right`,
-            250,
-            true
-        )
-        mySprite.vx = 0
-        mySprite.vy = 40
-        mySprite.ay = -200
-        pause(700)
-        mySprite.vx = 80
-        mySprite.vy = 0
-        mySprite.ay = 150
-        pause(300)
-        mySprite.vx = 0
-        mySprite.ay = 50
-        pause(300)
-        animation.runImageAnimation(
-            mySprite,
-            assets.animation`Idle_Right`,
-            100,
-            true
-        )
-    }
-
-
 }

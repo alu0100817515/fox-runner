@@ -18,7 +18,7 @@ function Nivel_3 () {
     custom.moverseIzquierda()
 }
 function Nivel_7 () {
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 5; index++) {
         custom.moverseDerecha()
     }
     custom.saltoDobleDerecha()
@@ -34,16 +34,14 @@ function Nivel_1 () {
     }
 }
 function Nivel_4 () {
-    for (let index = 0; index < 4; index++) {
-        custom.moverseDerecha()
+    for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 4; index++) {
+            custom.moverseDerecha()
+        }
+        custom.saltarDerecha()
     }
-    custom.saltarDerecha()
-    for (let index = 0; index < 3; index++) {
-        custom.moverseDerecha()
-    }
-    custom.saltarDerecha()
     custom.saltoDobleIzquierda()
-    for (let index = 0; index < 7; index++) {
+    for (let index = 0; index < 8; index++) {
         custom.moverseIzquierda()
     }
 }
@@ -58,18 +56,17 @@ function Fijar_Nivel (Nivel_actual: number) {
     controlNiveles(Nivel_actual)
 }
 function Nivel_8 () {
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 2; index++) {
         for (let index = 0; index < 4; index++) {
             custom.moverseDerecha()
         }
         custom.saltarDerecha()
     }
     custom.saltoDobleIzquierda()
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 3; index++) {
         custom.moverseIzquierda()
     }
     custom.saltarIzquierda()
-    custom.moverseIzquierda()
     custom.saltoDobleDerecha()
     for (let index = 0; index < 10; index++) {
         custom.moverseDerecha()
@@ -78,14 +75,14 @@ function Nivel_8 () {
 function controlNiveles (nivel: number) {
     if (nivel == 1) {
         scene.setBackgroundImage(assets.image`background`)
-        tiles.setCurrentTilemap(tilemap`nivel_1`)
+        tiles.setCurrentTilemap(tilemap`nivel45`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(9, 14))
     }
     if (nivel == 2) {
         scene.setBackgroundImage(assets.image`background`)
-        tiles.setCurrentTilemap(tilemap`nivel_2`)
+        tiles.setCurrentTilemap(tilemap`nivel44`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 13))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(14, 12))
@@ -220,7 +217,7 @@ function controlNiveles (nivel: number) {
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             `)
-        tiles.setCurrentTilemap(tilemap`nivel7`)
+        tiles.setCurrentTilemap(tilemap`nivel0`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(0, 10))
@@ -348,7 +345,7 @@ function controlNiveles (nivel: number) {
             1111111111111111111bbbbbbbbbbbbbbb11111bbbbbbbbbbbbbbbbbbbbbbb111111111111111bbbbbbbbbbb111111111bbbbbbbbbbbb1111111111111bbbbbbbbbbbbbbb111bbbbbbbbbbbbbb1111bb
             1111111111bbbbbbbbbbbbbbbbbbbbbbbb1111bbbbbbbbbbbbbbbbbbbbbbbbb11111111111111bbbbbbbbbbb1111111bbbbbbbbbbbbbbbb11111111bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
             `)
-        tiles.setCurrentTilemap(tilemap`nivel8`)
+        tiles.setCurrentTilemap(tilemap`nivel46`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(17, 6))
@@ -476,7 +473,7 @@ function controlNiveles (nivel: number) {
             eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
             eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
             `)
-        tiles.setCurrentTilemap(tilemap`nivel11`)
+        tiles.setCurrentTilemap(tilemap`nivel47`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(45, 11))
@@ -604,7 +601,7 @@ function controlNiveles (nivel: number) {
             1111111111111111111bbbbbbbbbbbbbbb11111bbbbbbbbbbbbbbbbbbbbbbb111111111111111bbbbbbbbbbb111111111bbbbbbbbbbbb1111111111111bbbbbbbbbbbbbbb111bbbbbbbbbbbbbb1111bb
             1111111111bbbbbbbbbbbbbbbbbbbbbbbb1111bbbbbbbbbbbbbbbbbbbbbbbbb11111111111111bbbbbbbbbbb1111111bbbbbbbbbbbbbbbb11111111bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
             `)
-        tiles.setCurrentTilemap(tilemap`nivel9`)
+        tiles.setCurrentTilemap(tilemap`nivel48`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(14, 8))
@@ -732,7 +729,7 @@ function controlNiveles (nivel: number) {
             cccccccccccccccccccccccccccccccc111111111111111c1cccccccccccccc1111111111ccccccc1111cccccccccccccccccc11111cc11111111111111111111ccccccccccccccccccccccccccccccc
             cccccccccccccccccccccccccccccccccc11111111cc1cccccccccccccccccc1111111111cccccccccc11cccccccccccccccccccccccccccc1111111111111cccccccccccccccccccccccccccccccccc
             `)
-        tiles.setCurrentTilemap(tilemap`nivel10`)
+        tiles.setCurrentTilemap(tilemap`nivel49`)
         tiles.placeOnTile(Camara, tiles.getTileLocation(0, 12))
         tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 14))
         tiles.placeOnTile(SpriteGoal, tiles.getTileLocation(15, 7))
@@ -761,10 +758,11 @@ function Nivel_2 () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSprite) {
     nivel = nivel + 1
     controlNiveles(nivel)
+    mySprite.setVelocity(0, 0)
 })
 function Nivel_6 () {
     for (let index = 0; index < 3; index++) {
-        for (let index = 0; index < 15; index++) {
+        for (let index = 0; index < 14; index++) {
             custom.moverseDerecha()
         }
         custom.saltarDerecha()
