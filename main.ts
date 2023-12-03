@@ -9,41 +9,16 @@ namespace SpriteKind {
     export const Muerte = SpriteKind.create()
 }
 function Nivel_3 () {
-    for (let index = 0; index < 10; index++) {
-        custom.moverseIzquierda()
-    }
-    for (let index = 0; index < 3; index++) {
-        custom.saltarIzquierda()
-    }
-    custom.moverseIzquierda()
+	
 }
 function Nivel_7 () {
-    for (let index = 0; index < 5; index++) {
-        custom.moverseDerecha()
-    }
-    custom.saltoDobleDerecha()
-    custom.saltoDobleIzquierda()
-    custom.saltoDobleDerecha()
-    for (let index = 0; index < 7; index++) {
-        custom.moverseDerecha()
-    }
+	
 }
 function Nivel_1 () {
-    for (let index = 0; index < 9; index++) {
-        custom.moverseDerecha()
-    }
+	
 }
 function Nivel_4 () {
-    for (let index = 0; index < 2; index++) {
-        for (let index = 0; index < 4; index++) {
-            custom.moverseDerecha()
-        }
-        custom.saltarDerecha()
-    }
-    custom.saltoDobleIzquierda()
-    for (let index = 0; index < 8; index++) {
-        custom.moverseIzquierda()
-    }
+	
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     startRunning()
@@ -56,21 +31,7 @@ function Fijar_Nivel (Nivel_actual: number) {
     controlNiveles(Nivel_actual)
 }
 function Nivel_8 () {
-    for (let index = 0; index < 2; index++) {
-        for (let index = 0; index < 4; index++) {
-            custom.moverseDerecha()
-        }
-        custom.saltarDerecha()
-    }
-    custom.saltoDobleIzquierda()
-    for (let index = 0; index < 3; index++) {
-        custom.moverseIzquierda()
-    }
-    custom.saltarIzquierda()
-    custom.saltoDobleDerecha()
-    for (let index = 0; index < 10; index++) {
-        custom.moverseDerecha()
-    }
+	
 }
 function controlNiveles (nivel: number) {
     if (nivel == 1) {
@@ -740,20 +701,10 @@ function controlNiveles (nivel: number) {
     }
 }
 function Nivel_5 () {
-    for (let index = 0; index < 8; index++) {
-        custom.moverseDerecha()
-        custom.saltarDerecha()
-    }
-    custom.moverseDerecha()
+	
 }
 function Nivel_2 () {
-    for (let index = 0; index < 5; index++) {
-        custom.moverseDerecha()
-    }
-    custom.saltarDerecha()
-    for (let index = 0; index < 8; index++) {
-        custom.moverseDerecha()
-    }
+	
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSprite) {
     nivel = nivel + 1
@@ -761,12 +712,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Goal, function (sprite, otherSpr
     mySprite.setVelocity(0, 0)
 })
 function Nivel_6 () {
-    for (let index = 0; index < 3; index++) {
-        for (let index = 0; index < 14; index++) {
-            custom.moverseDerecha()
-        }
-        custom.saltarDerecha()
-    }
+	
 }
 function startRunning () {
     Nivel_1()
